@@ -1,0 +1,48 @@
+			/* css rule/rule-set */
+			
+			
+			h1 {	/*Element selector example*/
+				color:orange;
+				background-color:gray;
+			}
+			
+			p {	/*Element selector example*/
+				color:green;
+			}
+			
+			.quote {	/*Class selector example*/
+				color:purple;
+			}
+			
+			.footer { /*Class selector example*/
+				text-align:center;
+			}
+			
+			#para1 { /* id selector example */
+				text-align:right;
+				color:brown;
+			}
+			
+			* {
+				color:yellow;
+			}
+			
+			
+			
+			/*
+			
+				What is CDN?
+				
+				AO code
+				Circle
+				Ward
+				
+				Assessee type
+				Individual
+				Company
+				Association of Persons
+				Body of Individuals
+				HUF - Hindu Undivided Family
+				
+			*/
+			
