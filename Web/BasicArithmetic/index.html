@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<title>Some Basic Arithmetic Calculations</title>
+		
+		<script>
+			function add() {
+				var a, b, c;	//Data type is not written while declaring a variable
+				
+				a = Number(document.getElementById('Augend').value);
+				b = Number(document.getElementById('Addend').value);
+				
+				c = a + b;
+				
+				document.getElementById('Sum').value = c;
+			}
+			
+			function sub() {
+				var a, b, c;	//Data type is not written while declaring a variable
+				
+				a = Number(document.getElementById('Subtrahend').value);
+				b = Number(document.getElementById('Minuend').value);
+				
+				c = a - b;
+				
+				document.getElementById('Difference').value = c;
+			}
+			
+			function findEvenOdd() {
+				var n;
+				
+				n = document.getElementById('Number').value;
+				
+				if(n%2==0)
+					document.getElementById('EvenOdd').value='Even';
+				else
+					document.getElementById('EvenOdd').value='Odd';
+			}
+			
+			function factorial() {
+				var n, i, f=1;
+				
+				n = document.getElementById('FactorialNumber').value;
+				
+				//alert("n=" + n + ",f=" + f);
+				
+				for(i=n; i>=1; i--)
+					f = f * i;
+					
+					
+				document.getElementById("Factorial").value = f;
+			}
+		</script>
+	</head>
+	
+	<body>
+		<h1><center>Basic Arithmetic Calculations</center></h1>
+		<table cellspacing="10" cellpadding="10" border="1">
+			<tr>
+				<td>
+					<h3><center>Addition</center></h3>
+					<form>
+						<label>Augend</label>
+						<input type="text" placeholder="Augend" id="Augend"><br><br>
+						<label>Addend</label>
+						<input type = "text" placeholder="Addend" id="Addend"><br><br>
+						<label>Sum</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type = "text" readonly placeholder="Sum" id="Sum"> <br><br>
+						<input type = "button" value = "Add" onclick="add()">
+						<button type="reset">Reset</button>
+					</form>
+				</td>
+				<td>
+					<h3><center>Subtraction</center></h3>
+					<form>
+						<label>Subtrahend</label>
+						<input type="text" placeholder="Subtrahend" id="Subtrahend"><br><br>
+						<label>Minuend</label>
+						<input type = "text" placeholder="Minuend" id="Minuend"><br><br>
+						<label>Difference</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type = "text" readonly placeholder="Difference" id="Difference"> <br><br>
+						<input type = "button" value = "Subtract" onclick="sub()">
+						<button type="reset">Reset</button>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3><center>Even or Odd</center></h3>
+					<form>
+						<label>Number</label>
+						<input type="text" placeholder="Number" id="Number"><br><br>
+						<label>Even/Odd</label>
+						<input type = "text" readonly placeholder="Even/Odd" id="EvenOdd"> <br><br>
+						<input type = "button" value = "Find" onclick="findEvenOdd()">
+						<button type="reset">Reset</button>
+					</form>
+				</td>
+				<td>
+					<h3><center>Factorial</center></h3>
+					<form>
+						<label>Number</label>
+						<input type="text" placeholder="Number" id="FactorialNumber"><br><br>
+						<label>Factorial</label>
+						<input type = "text" readonly placeholder="Factorial" id="Factorial"> <br><br>
+						<input type = "button" value = "Find" onclick="factorial()">
+						<button type="reset">Reset</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</body>
+<html>

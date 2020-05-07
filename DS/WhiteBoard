@@ -1,0 +1,47 @@
+	Data Structure
+		Data Structure is a particular way of organizing data in a computer so that it can 
+		be used effectively. The most basics examples are arrays and strings.
+	
+	Abstract Data Type (ADT)
+		The abstract datatype is a special kind of datatype, whose behaviour is defined by a
+		set of values and set of operations.
+		
+		
+	Create an account in GitHub.com
+	
+	Why did we use array?
+	
+	Prerequsite for array: Loops
+	
+	Basic variable - primitive types - e.g. int, char (datatype already built into a language)
+	
+	Array variable - derived types - e.g. array, pointer etc
+	
+	int array, float array, double array - mostly works on the same principle
+	
+	char array are different from the above so that they become suitable for taking string
+	inputs.
+	
+	char[]
+	string - Abstract Data Type
+	
+	zoom - security issues
+		Waiting Room
+		Renaming Participant
+		Chatting
+		Sharing
+		
+	No alternative for zoom
+	Google Hagouts Meet
+	Cisco webex Meeting
+	Microsoft Teams
+	Skype
+	
+	10 million
+	200 million
+	
+	They did not test security issues
+	
+	
+	
+	
