@@ -18,7 +18,7 @@ class bank_account
 	
 	public:
 		void menu();
-		bank_account();	//constructor
+		void init();
 		void deposit();
 		void withdraw();
 		void display();
@@ -54,7 +54,7 @@ void bank_account :: menu()
 	}
 }
 
-bank_account :: bank_account()
+void bank_account :: init()
 {
 	dep_name = "Ritik";
 	acno = 123;
@@ -94,7 +94,7 @@ void bank_account :: display()
 int main()
 {
 	bank_account acc;
-	//acc.init();
+	acc.init();
 	acc.menu();
 	
 	return 0;
