@@ -14,10 +14,16 @@ class A					//Base Class
 		{
 			a=10;
 		}
+		
+		void display()
+		{
+			cout<<"a="<<a<<endl;
+		}
 };
 
-class B : public A			//Derived Class (Class B inherits the public properties of Class A)
+class B			//Base Class
 {
+	protected:
 		int b;
 	
 	public:
@@ -25,21 +31,35 @@ class B : public A			//Derived Class (Class B inherits the public properties of 
 		{
 			b=20;
 		}
-		void displayAB()
+		void display()
 		{
-			cout<<"a="<<a<<", b="<<b<<endl;
+			cout<<"b="<<b<<endl;
 		}	
+};
+
+class C : public A, public B
+{
+		int c;
+	public:
+		C()
+		{
+			c=30;
+		}
+		
+		void display()
+		{
+			cout<<"c="<<c<<endl;
+		}
 };
 
 
 int main()
 {
-	B obB = new B();			//error
+	C obC;
 	
-	obB.displayAB();			//error
-	//obB.displayB();
-	
-	//obB.a = 40;		//cannot be used here as it is protected
+	obC.A::display();
+	obC.B::display();
+	obC.display();
 	
 	return 0;
 }

@@ -1,5 +1,5 @@
-Imports System.Windows.Forms
-Imports System.Drawing
+Imports System.Windows.Forms			'Namespace
+Imports System.Drawing					'Namespace
 
 Class Addition 
 	inherits Form

@@ -1,4 +1,4 @@
-//									PROGRAM TO DEMONSTRATE INHERITANCE (SINGLE INHERITANCE)
+//									PROGRAM TO DEMONSTRATE INHERITANCE (MULTILEVEL INHERITANCE)
 
 #include<iostream>
 
@@ -14,10 +14,16 @@ class A					//Base Class
 		{
 			a=10;
 		}
+		
+		void displayA()
+		{
+			cout<<"a="<<a<<endl;
+		}
 };
 
-class B : public A			//Derived Class (Class B inherits the public properties of Class A)
+class B : public A
 {
+	protected:
 		int b;
 	
 	public:
@@ -25,21 +31,36 @@ class B : public A			//Derived Class (Class B inherits the public properties of 
 		{
 			b=20;
 		}
-		void displayAB()
+		void displayB()
 		{
-			cout<<"a="<<a<<", b="<<b<<endl;
+			cout<<"b="<<b<<endl;
 		}	
+};
+
+class C : public B
+{
+		int c;
+	public:
+		C()
+		{
+			c=30;
+		}
+		
+		void displayC()
+		{
+			cout<<"c="<<c<<endl;
+		}
 };
 
 
 int main()
 {
-	B obB = new B();			//error
+	C obC;
 	
-	obB.displayAB();			//error
-	//obB.displayB();
-	
-	//obB.a = 40;		//cannot be used here as it is protected
+
+	obC.displayA();	
+	obC.displayB();
+	obC.displayC();
 	
 	return 0;
 }
