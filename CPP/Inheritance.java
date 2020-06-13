@@ -2,9 +2,9 @@
 
 class A					//Base Class
 {
-		int a;
+		protected int a;
 	
-		A()
+		A()			//Constructor
 		{
 			a=10;
 		}
@@ -14,7 +14,7 @@ class B extends A			//Derived Class (Class B inherits the public properties of C
 {
 		int b;
 	
-		B()
+		B()				//Constructor
 		{
 			b=20;
 		}
