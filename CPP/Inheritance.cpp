@@ -36,7 +36,7 @@ int main()
 {
 	B obB = new B();			//error
 	
-	obB.displayAB();			//error
+	obB.displayAB();			//error		pointer to object
 	//obB.displayB();
 	
 	//obB.a = 40;		//cannot be used here as it is protected
