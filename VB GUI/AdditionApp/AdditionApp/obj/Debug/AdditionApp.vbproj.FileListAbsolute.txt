@@ -9,4 +9,4 @@ D:\BATCHES\ONLITS1901\VB GUI\AdditionApp\AdditionApp\obj\Debug\AdditionApp.vbpro
 D:\BATCHES\ONLITS1901\VB GUI\AdditionApp\AdditionApp\obj\Debug\AdditionApp.exe
 D:\BATCHES\ONLITS1901\VB GUI\AdditionApp\AdditionApp\obj\Debug\AdditionApp.xml
 D:\BATCHES\ONLITS1901\VB GUI\AdditionApp\AdditionApp\obj\Debug\AdditionApp.pdb
-D:\BATCHES\ONLITS1901\VB GUI\AdditionApp\AdditionApp\obj\Debug\AdditionApp.AdditionApp.resources
+D:\BATCHES\ONLITS1901\VB GUI\AdditionApp\AdditionApp\obj\Debug\AdditionApp.FrmAdditionApp.resources
