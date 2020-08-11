@@ -22,7 +22,7 @@ class complex
 		}
 		void display()
 		{
-			cout<<"real: "<<real<<", imaginary: "<<imag<<endl;
+			cout<<"real: "<<this->real<<", imaginary: "<<this->imag<<endl;
 		}
 		complex operator+(complex &x);			//declaration
 };
