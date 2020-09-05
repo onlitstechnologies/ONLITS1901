@@ -1,0 +1,12 @@
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\bin\Debug\MyNotepad.exe.config
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\bin\Debug\MyNotepad.exe
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\bin\Debug\MyNotepad.pdb
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\bin\Debug\MyNotepad.xml
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.vbprojAssemblyReference.cache
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.FrmMyNotepad.resources
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.Resources.resources
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.vbproj.GenerateResource.cache
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.vbproj.CoreCompileInputs.cache
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.exe
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.xml
+C:\Users\Manish\Source\Repos\MyNotepad\MyNotepad\obj\Debug\MyNotepad.pdb

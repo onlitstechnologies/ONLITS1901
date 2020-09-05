@@ -4,9 +4,10 @@ Module FirstFile
 	Sub Main()
 	
 		Dim str as String
-		Dim sw as new StreamWriter("FirstFile.txt")		'sw is reference to object of StreamWriter class
+		
 	
 		'-------WRITING CONTENT TO A FILE
+		Dim sw as new StreamWriter("FirstFile.txt")		'sw is reference to object of StreamWriter class
 		Console.WriteLine("Please type some text below:")
 		str = Console.ReadLine()
 		sw.WriteLine(str)
