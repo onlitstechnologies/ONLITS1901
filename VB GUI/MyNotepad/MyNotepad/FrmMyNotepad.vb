@@ -2,11 +2,15 @@
 Public Class FrmMyNotepad
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         If (TxtEditingArea.Text <> "") Then
-            Dim result As Integer = MessageBox.Show("Do you want to save Text!", "MyNotepad", MessageBoxButtons.YesNoCancel)
+            If (Me.Text.Substring(0, 1) = "*") Then
+                Dim result As Integer = MessageBox.Show("Do you want to save Text!", "MyNotepad", MessageBoxButtons.YesNoCancel)
 
-            If (result = 6) Then
-                SaveFile()
-            ElseIf (result = 7) Then
+                If (result = 6) Then
+                    SaveFile()
+                ElseIf (result = 7) Then
+                    TxtEditingArea.Clear()
+                End If
+            Else
                 TxtEditingArea.Clear()
             End If
         End If
@@ -42,6 +46,7 @@ Public Class FrmMyNotepad
         If (ofd.ShowDialog() = DialogResult.OK) Then
             Dim sr As New StreamReader(ofd.FileName)
             TxtEditingArea.Text = sr.ReadLine()
+            Me.Text = ofd.FileName
             sr.Close()
         End If
     End Sub
@@ -82,4 +87,9 @@ Public Class FrmMyNotepad
         TxtEditingArea.Font = New Font(fonts(1), fonts(3))
 
     End Sub
+
+    Private Sub TxtEditingArea_TextChanged(sender As Object, e As EventArgs) Handles TxtEditingArea.TextChanged
+        Me.Text = "*" & Me.text
+    End Sub
+
 End Class

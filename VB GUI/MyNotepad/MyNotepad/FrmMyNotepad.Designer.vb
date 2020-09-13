@@ -138,13 +138,13 @@ Partial Class FrmMyNotepad
         '
         Me.WordWrapToolStripMenuItem.CheckOnClick = True
         Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
-        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.WordWrapToolStripMenuItem.Text = "&Word Wrap"
         '
         'FontToolStripMenuItem
         '
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.FontToolStripMenuItem.Text = "&Font"
         '
         'ViewToolStripMenuItem
