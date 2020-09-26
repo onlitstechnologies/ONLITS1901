@@ -65,6 +65,7 @@ Partial Class FrmNewDoctor
         Me.TxtDoctorId.ReadOnly = True
         Me.TxtDoctorId.Size = New System.Drawing.Size(100, 20)
         Me.TxtDoctorId.TabIndex = 1
+        Me.TxtDoctorId.TabStop = False
         '
         'TxtDateOfJoining
         '
@@ -73,6 +74,7 @@ Partial Class FrmNewDoctor
         Me.TxtDateOfJoining.ReadOnly = True
         Me.TxtDateOfJoining.Size = New System.Drawing.Size(100, 20)
         Me.TxtDateOfJoining.TabIndex = 3
+        Me.TxtDateOfJoining.TabStop = False
         '
         'Label2
         '

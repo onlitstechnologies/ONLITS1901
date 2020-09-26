@@ -1,6 +1,10 @@
 ﻿Imports System.IO
 Imports System.Data.SqlClient
+
 Public Class FrmNewDoctor
+    Dim con As New SqlConnection("Server=(localdb)\mssqllocaldb;Database=Clinic")
+    Dim cmd As New SqlCommand()
+    Dim dr As SqlDataReader
     Private Sub FrmNewDoctor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MdiParent = FrmMDI
 
@@ -10,7 +14,26 @@ Public Class FrmNewDoctor
         CboSpecialization.Items.Add("General Physician")
         CboSpecialization.Items.Add("Opthomologist")
         CboSpecialization.Items.Add("Cardiologist")
+
+        GenerateDoctorId()
+
     End Sub
+
+    Private Sub GenerateDoctorId()
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandText = "SELECT doctor_id FROM Doctor"
+        dr = cmd.ExecuteReader()
+        While (dr.Read())
+            TxtDoctorId.Text = dr("doctor_id")
+            MessageBox.Show("Pause...")
+        End While
+        dr.Close()
+        con.Close()
+
+        'TxtDoctorId.Text = TxtDoctorId.Text + 1
+    End Sub
+
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Me.Close()
@@ -22,11 +45,9 @@ Public Class FrmNewDoctor
     End Sub
 
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
-        Dim con As New SqlConnection("Server=(localdb)\mssqllocaldb;Database=Clinic")
-        Dim cmd As New SqlCommand()
         con.Open()
         cmd.Connection = con
-        cmd.CommandText = "INSERT INTO Doctor VALUES('D001','Prince Kumar','M','1985-06-07')"
+        cmd.CommandText = "INSERT INTO Doctor VALUES('" & TxtDoctorId.Text & "','" & TxtName.Text & "','M','1985-06-07')"
         cmd.ExecuteNonQuery()
         con.Close()
         MessageBox.Show("Data inserted successfully!")
