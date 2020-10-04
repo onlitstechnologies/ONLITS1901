@@ -1,1 +1,1 @@
-This is a VB program in Ubuntu.
+Hello, this is VB program running on mono.
