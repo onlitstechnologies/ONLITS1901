@@ -26,12 +26,21 @@ Public Class FrmNewDoctor
         dr = cmd.ExecuteReader()
         While (dr.Read())
             TxtDoctorId.Text = dr("doctor_id")
-            MessageBox.Show("Pause...")
         End While
         dr.Close()
         con.Close()
 
-        'TxtDoctorId.Text = TxtDoctorId.Text + 1
+        TxtDoctorId.Text = TxtDoctorId.Text.Substring(1)
+
+        TxtDoctorId.Text += 1
+
+        If (TxtDoctorId.Text < 10) Then
+            TxtDoctorId.Text = "D00" & TxtDoctorId.Text
+        ElseIf (txtdoctorid.Text < 100) Then
+            TxtDoctorId.Text = "D0" & TxtDoctorId.Text
+        ElseIf (txtdoctorid.Text < 1000) Then
+            TxtDoctorId.Text = "D" & TxtDoctorId.Text
+        End If
     End Sub
 
 
@@ -45,11 +54,33 @@ Public Class FrmNewDoctor
     End Sub
 
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
+        Dim g As String
+        If (RdbMale.Checked) Then
+            g = "M"
+        Else
+            g = "F"
+        End If
+
         con.Open()
         cmd.Connection = con
-        cmd.CommandText = "INSERT INTO Doctor VALUES('" & TxtDoctorId.Text & "','" & TxtName.Text & "','M','1985-06-07')"
+        cmd.CommandText = "INSERT INTO Doctor VALUES('" & TxtDoctorId.Text & "','" & TxtName.Text & "','" & g & "','1977-09-18')"
         cmd.ExecuteNonQuery()
         con.Close()
         MessageBox.Show("Data inserted successfully!")
+        ResetForm()
+    End Sub
+
+    Private Sub BtnReset_Click(sender As Object, e As EventArgs) Handles BtnReset.Click
+        ResetForm()
+    End Sub
+
+    Private Sub ResetForm()
+        GenerateDoctorId()
+        TxtDateOfJoining.Text = Today.Date
+        TxtName.Clear()
+        RdbMale.Checked = True
+        DtpDateOfBirth.Value = Today.Date
+
+        TxtName.Focus()
     End Sub
 End Class
