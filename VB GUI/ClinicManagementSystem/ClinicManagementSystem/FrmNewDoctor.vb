@@ -63,7 +63,7 @@ Public Class FrmNewDoctor
 
         con.Open()
         cmd.Connection = con
-        cmd.CommandText = "INSERT INTO Doctor VALUES('" & TxtDoctorId.Text & "','" & TxtName.Text & "','" & g & "','1977-09-18')"
+        cmd.CommandText = "INSERT INTO Doctor(doctor_id, doctor_name, gender, date_of_birth) VALUES('" & TxtDoctorId.Text & "','" & TxtName.Text & "','" & g & "','1977-09-18')"
         cmd.ExecuteNonQuery()
         con.Close()
         MessageBox.Show("Data inserted successfully!")
