@@ -1,5 +1,6 @@
 #!/bin/bash
-git pull
+mess=$(date +'%Y%m%d')
+git pull https://github.com/onlitstechnologies/ONLITS1901.git
 git add .
-git commit -m 'date +%Y%m%d' 
-git push
+git commit -m "$mess"
+git push https://github.com/onlitstechnologies/ONLITS1901.git
