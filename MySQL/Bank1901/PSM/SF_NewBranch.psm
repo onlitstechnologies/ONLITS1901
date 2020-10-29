@@ -1,0 +1,8 @@
+DROP PROCEDURE IF EXISTS NewBranch;
+DELIMITER //
+CREATE PROCEDURE NewBranch(bname VARCHAR(30))
+BEGIN
+INSERT INTO Branch VALUES(GenerateBranchCode(),bname,GenerateBranchIFSC());
+END;
+//
+DELIMITER ;
