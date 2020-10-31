@@ -1,0 +1,20 @@
+DROP FUNCTION IF EXISTS GenerateBranchCode;
+DELIMITER //
+CREATE FUNCTION GenerateBranchCode()
+RETURNS CHAR(4)
+BEGIN
+DECLARE bcode CHAR(4);
+DECLARE sl INT;
+SET sl = GenerateSerial();
+SET sl = sl + 1;
+IF(sl<10) THEN
+SET bcode = CONCAT('B00',sl);
+ELSEIF(sl<100) THEN
+SET bcode = CONCAT('B0',sl);
+ELSEIF(sl<1000) THEN
+SET bcode = CONCAT('B',sl);
+END IF;
+RETURN bcode;
+END;
+//
+DELIMITER ;

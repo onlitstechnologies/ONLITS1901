@@ -1,4 +1,4 @@
-//Program to add two complex numbers with Operator Overloading
+//Program to add two complex numbers with Operator Overloading and Friend Function
 
 #include<iostream>
 
@@ -24,15 +24,15 @@ class complex
 		{
 			cout<<"real: "<<this->real<<", imaginary: "<<this->imag<<endl;
 		}
-		complex operator+(complex &x);			//declaration
+		friend complex operator+(complex &x, complex &y);			//friend function declaration
 };
 
-complex complex :: operator+(complex &x)
+complex operator+(complex &x, complex &y)
 {
 	complex ct;
 	
-	ct.real = this->real + x.real;
-	ct.imag = this->imag + x.imag;
+	ct.real = x.real + y.real;
+	ct.imag = x.imag + y.imag;
 	
 
 	return ct;			//this is one the explicit use of 'this pointer' 				
