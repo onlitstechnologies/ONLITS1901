@@ -35,3 +35,8 @@ void display(node* r)
 	printf("  /    \\ \n");
 	printf("%d\t%d\n", r->left->number, r->right->number);
 }
+
+
+
+
+
