@@ -24,7 +24,7 @@ class BankAccount:
             print ("Invalid option!")
             self.menu()
 
-    def __init__(self):
+    def __init__(self):                                 #Constructor
         self.__dep_name = "Ritik"
         self.acno = 123
         self.actype = "SA"
