@@ -1,8 +1,10 @@
 import java.awt.*;
-class Addition extends Frame {
+import java.awt.event.*;
+
+class Addition extends Frame implements ActionListener {
 	Label lbl_augend, lbl_addend, lbl_sum;
 	TextField txt_augend, txt_addend, txt_sum;
-	Button btn_add;
+	Button btn_add,btn_reset;
 	
 	Addition() {
 	//----lbl_augend--------------
@@ -39,18 +41,62 @@ class Addition extends Frame {
 		btn_add = new Button("Add");
 		btn_add.setBounds(60, 300, 50, 30);
 		this.add(btn_add);
+		btn_add.addActionListener(this);
 		
+	//----btn_reset---------------
+		btn_reset = new Button("Reset");
+		btn_reset.setBounds(120, 300, 50, 30);
+		this.add(btn_reset);
+		btn_reset.addActionListener(this);
 		
 	//-------Frame Properties
 		this.setLayout(null);
 		this.setSize(500, 500);
 		this.setVisible(true);
 		this.setTitle("Addition App");
+		
+			//-----Eventhandler for closing window
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				dispose();
+			}
+		});
 	}
+	
+	//----ActionListener Eventhandler----------
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == btn_add) {
+			btn_addClick();
+		}
+		else if(e.getSource() == btn_reset) {
+			btn_resetClick();
+		}
+	}
+	
+	//----btn_add event handler --------
+	void btn_addClick() {
+		int a, b, c;
+		a = Integer.parseInt(txt_augend.getText());
+		b = Integer.parseInt(txt_addend.getText());
+		
+		c = a + b;
+		
+		txt_sum.setText(Integer.toString(c));
+	}
+	
+	//-----btn_reset event handler --------
+	void btn_resetClick() {
+		txt_augend.setText("");
+		txt_addend.setText("");
+		txt_sum.setText("");
+	}
+	
 }
 
 class AdditionGUI {
 	public static void main(String[] args) {
-		new Addition();
+		new Addition();		//anonymous object
 	}
 }
+
+
