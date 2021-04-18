@@ -22,7 +22,7 @@ int factorial(int n)
 {
 	int fact = 1;
 
-	for(int i=n; i>1; i--)
+	for(int i=n; i>1; i--)		//C++ type of variable declaration is possible only in c99 onwards compilers
 	{
 		fact = fact * i;
 	}
