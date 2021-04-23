@@ -1,0 +1,14 @@
+DROP PROCEDURE IF EXISTS SP_Login;
+DELIMITER //
+CREATE PROCEDURE SP_Login(uid VARCHAR(20), pwd VARCHAR(20))
+BEGIN
+DECLARE id varchar(20);
+SELECT userid INTO id FROM User WHERE userid=uid AND password=pwd AND status='A';
+IF(id<>NULL) THEN
+INSERT INTO AuthenticationLog(userid, date, time, attempt_status) VALUES(id, CURDATE(), CURTIME(), 'S');
+ELSE
+INSERT INTO AuthenticationLog(uid, date, time, attempt_status) VALUES(id, CURDATE(), CURTIME(), 'F');
+END IF;
+END;
+//
+DELIMITER ;
