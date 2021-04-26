@@ -1,0 +1,11 @@
+VB.Net QP Solved
+
+						2010
+
+			(a)		(ii)				In VB.Net the property is SelectedIndex (This question is from VB 6.0)
+			(b)		(ii)				Refresh is not a method of recordset and stayInSync is a property
+			(c)		(iv)
+			
+			
+			
+			
