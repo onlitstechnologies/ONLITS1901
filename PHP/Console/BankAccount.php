@@ -47,7 +47,7 @@ class BankAccount
     {
         echo ("Enter amount to deposit: ");
         $this->amount = readline();
-        $this->balance = $this->balance + $this->amount;          //error
+        $this->balance = $this->balance + $this->amount;
         $this->menu();
     }
 
