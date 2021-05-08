@@ -1,5 +1,6 @@
 <?php
-$eid = $_GET['employee_id'];
+$eid = $_GET['eid'];
+echo $eid;
 $ename = $_GET['employee_name'];
 $con = new mysqli('localhost','john','123','Bank1901');
 if($con->connect_error) {

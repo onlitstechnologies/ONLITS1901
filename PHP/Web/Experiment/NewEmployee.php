@@ -1,3 +1,7 @@
+<?php
+include 'Employee.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +14,13 @@
 <body>
     <form action="NewEmployeeSubmit.php">
         <label for="employee_id">Employee Id</label>
-        <input type="text" name="employee_id" id="employee_id"> <br>
+        <input type="text" name="employee_id" id="employee_id" readonly value="<?= generate_employee_id()?>"> <br>
         <label for="employee_name">Employee Name</label>
         <input type="text" name="employee_name" id="employee_name"> <br>
+        <label for="branch_code">Branch Code</label> <br>
+        <?php fetch_branch();?> <br> <br>
+        <input type="radio" name="gender" id="gender" checked>Male
+        <input type="radio" name="gender" id="gender">Female <br> <br>
         <button>Submit</button>
         <button type="reset">Reset</button>
     </form>
