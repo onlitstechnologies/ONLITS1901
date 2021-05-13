@@ -26,15 +26,20 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
+    <header>
+        <?php
+        include 'Header.html';
+        ?>
+    </header>
     <form>
         <label for="employee_id">Employee Id</label>
-        <input type="text" name="employee_id" id="employee_id" value="<?= $eid?>">
+        <input type="text" name="employee_id" id="employee_id" value="<?= $eid ?>">
         <button id="search">Search</button><br>
     </form>
     <form action="EditEmployeeSubmit.php">
-        <input type="hidden" name="eid" value="<?= $eid?>">
+        <input type="hidden" name="eid" value="<?= $eid ?>">
         <label for="employee_name">Employee Name</label>
-        <input type="text" name="employee_name" id="employee_name" value="<?= $ename?>"> <br>
+        <input type="text" name="employee_name" id="employee_name" value="<?= $ename ?>"> <br>
         <label for="branch_code">Branch Code</label>
         <input type="text" name="branch_code" id="branch_code">
         <button id="submit">Submit</button>

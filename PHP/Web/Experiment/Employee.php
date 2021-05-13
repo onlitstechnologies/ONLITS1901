@@ -9,7 +9,14 @@ function generate_employee_id()
         $cur_id = $row[0];
         $cur_id = substr($cur_id, 1);
         $next_id = $cur_id + 1;
-        $next_id = 'E00' . $next_id;
+
+        if ($next_id < 10)
+            $next_id = 'E00' . $next_id;
+        else if ($next_id < 100)
+            $next_id = 'E0' . $next_id;
+        else
+            $next_id = 'E' . $next_id;
+
         return $next_id;
     }
     $con->close();
