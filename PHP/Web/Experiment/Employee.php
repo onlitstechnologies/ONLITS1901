@@ -35,3 +35,20 @@ function fetch_branch()
     echo '</select>';
     $con->close();
 }
+
+function fetch_existing_branch($p_bcode)
+{
+    include 'Connect.php';
+    $sql = "SELECT BranchCode FROM Branch";
+    $result = $con->query($sql);
+    echo '<select name="branch_code" id="branch_code">';
+    while ($row = $result->fetch_array()) {
+        $bcode = $row[0];
+        if ($bcode == $p_bcode)
+            echo  '<option value="' . $bcode . '" selected>' . $bcode . '</option>';
+        else
+            echo  '<option value="' . $bcode . '">' . $bcode . '</option>';
+    }
+    echo '</select>';
+    $con->close();
+}

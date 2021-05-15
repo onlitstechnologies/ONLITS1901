@@ -1,6 +1,9 @@
 <?php
+include 'Employee.php';
+include 'Common.php';
+
 $eid = $_GET['employee_id'];
-$ename = null;
+
 $con = new mysqli('localhost', 'john', '123', 'Bank1901');
 if ($con->connect_error) {
     die($con->connect_error);
@@ -11,6 +14,11 @@ $result = $con->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $ename = $row['EmployeeName'];
+    $bcode = $row['BranchCode'];
+    $gender = $row['Gender'];
+    $mobile = $row['Mobile'];
+    $state = $row['State'];
+    echo "<script>alert('$state')</script>";
 }
 ?>
 
@@ -41,7 +49,14 @@ if ($result->num_rows > 0) {
         <label for="employee_name">Employee Name</label>
         <input type="text" name="employee_name" id="employee_name" value="<?= $ename ?>"> <br>
         <label for="branch_code">Branch Code</label>
-        <input type="text" name="branch_code" id="branch_code">
+        <?php fetch_existing_branch($bcode); ?> <br> <br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="gender" <?php if($gender == 'M') {echo 'checked';}?> value='M'>Male
+        <input type="radio" name="gender" id="gender" <?php if($gender == 'F') {echo 'checked';}?> value='F'>Female <br> <br>
+        <label for="mobile_no">Mobile No</label>
+        <input type="text" name="mobile_no" id="mobile_no" value="<?= $mobile?>"> <br>
+        <label for="state">State</label>
+        <?php fetch_existing_state($state); ?> <br> <br>
         <button id="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
