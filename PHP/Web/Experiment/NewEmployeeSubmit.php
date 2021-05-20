@@ -1,5 +1,5 @@
 <?php
-
+include 'Header.php';
 $eid = $_GET['employee_id'];
 $ename = $_GET['employee_name'];
 $bcode = $_GET['branch_code'];
