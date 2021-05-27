@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.TokenGenerator.Form1
+            Me.MainForm = Global.TokenGenerator.FrmTokenGenerator
         End Sub
     End Class
 End Namespace

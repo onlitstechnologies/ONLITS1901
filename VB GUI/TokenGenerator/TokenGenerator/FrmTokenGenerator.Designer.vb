@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class FrmTokenGenerator
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTokenGenerator))
         Me.BtnSR = New System.Windows.Forms.Button()
         Me.BtnBP = New System.Windows.Forms.Button()
         Me.PrdSR = New System.Drawing.Printing.PrintDocument()
@@ -40,7 +40,7 @@ Partial Class Form1
         Me.BtnSR.Name = "BtnSR"
         Me.BtnSR.Size = New System.Drawing.Size(210, 70)
         Me.BtnSR.TabIndex = 0
-        Me.BtnSR.Text = "SR000"
+        Me.BtnSR.Text = "SR001"
         Me.BtnSR.UseVisualStyleBackColor = False
         '
         'BtnBP
@@ -52,10 +52,13 @@ Partial Class Form1
         Me.BtnBP.Name = "BtnBP"
         Me.BtnBP.Size = New System.Drawing.Size(210, 70)
         Me.BtnBP.TabIndex = 1
-        Me.BtnBP.Text = "BP000"
+        Me.BtnBP.Text = "BP001"
         Me.BtnBP.UseVisualStyleBackColor = False
         '
         'PrdSR
+        '
+        '
+        'PrdBP
         '
         '
         'PdgCommon
@@ -72,7 +75,7 @@ Partial Class Form1
         Me.PpdCommon.Name = "PpdCommon"
         Me.PpdCommon.Visible = False
         '
-        'Form1
+        'FrmTokenGenerator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -82,7 +85,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "FrmTokenGenerator"
         Me.Text = "Token Generator"
         Me.ResumeLayout(False)
 
