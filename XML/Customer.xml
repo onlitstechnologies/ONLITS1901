@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Employee>
+    <row>
+        <id>E001</id>
+        <name>Banty Kumar</name>
+        <location>Muzaffarpur</location>
+    </row>
+    <row>
+        <id>E002</id>
+        <name>Aman Kumar</name>
+        <location>Muzaffarpur</location>
+    </row>
+    <row>
+        <id>E003</id>
+        <name>Neha Bharti</name>
+        <location>Muzaffarpur</location>
+    </row>
+    <row>
+        <id>E004</id>
+        <name>Md. Waseem</name>
+        <location>Muzaffarpur</location>
+    </row>
+    <row>
+        <id>E005</id>
+        <name>Prince Kumar</name>
+        <location>Muzaffarpur</location>
+    </row>
+</Employee>

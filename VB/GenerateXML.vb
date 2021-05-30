@@ -1,0 +1,67 @@
+Imports System.Xml
+
+Module GenerateXML
+    Sub Main
+        Dim writer As New XmlTextWriter("Employee.xml", System.Text.Encoding.UTF8)
+        writer.WriteStartDocument()
+        writer.Formatting = Formatting.Indented
+        writer.WriteStartElement("Employee")
+        writer.WriteStartElement("Row")
+        writer.WriteStartElement("Id")
+        writer.WriteString("E001")
+        writer.WriteEndElement()
+        writer.WriteStartElement("Name")
+        writer.WriteString("Neha Bharti")
+        writer.WriteEndElement
+        Writer.WriteStartElement("Location")
+        writer.WriteString("Muzaffarpur")
+        writer.WriteEndElement()
+        Writer.WriteEndElement()
+        writer.WriteStartElement("Row")
+        writer.WriteStartElement("Id")
+        writer.WriteString("E002")
+        writer.WriteEndElement()
+        writer.WriteStartElement("Name")
+        writer.WriteString("Aman Kumar")
+        writer.WriteEndElement
+        Writer.WriteStartElement("Location")
+        writer.WriteString("Muzaffarpur")
+        writer.WriteEndElement()
+        Writer.WriteEndElement()
+        writer.WriteStartElement("Row")
+        writer.WriteStartElement("Id")
+        writer.WriteString("E003")
+        writer.WriteEndElement()
+        writer.WriteStartElement("Name")
+        writer.WriteString("Banty Kumar")
+        writer.WriteEndElement
+        Writer.WriteStartElement("Location")
+        writer.WriteString("Muzaffarpur")
+        writer.WriteEndElement()
+        Writer.WriteEndElement()
+        writer.WriteStartElement("Row")
+        writer.WriteStartElement("Id")
+        writer.WriteString("E004")
+        writer.WriteEndElement()
+        writer.WriteStartElement("Name")
+        writer.WriteString("Md. Waseem")
+        writer.WriteEndElement
+        Writer.WriteStartElement("Location")
+        writer.WriteString("Muzaffarpur")
+        writer.WriteEndElement()
+        Writer.WriteEndElement()
+        writer.WriteStartElement("Row")
+        writer.WriteStartElement("Id")
+        writer.WriteString("E005")
+        writer.WriteEndElement()
+        writer.WriteStartElement("Name")
+        writer.WriteString("Prince Kumar")
+        writer.WriteEndElement
+        Writer.WriteStartElement("Location")
+        writer.WriteString("Muzaffarpur")
+        writer.WriteEndElement()
+        Writer.WriteEndElement()
+        Writer.WriteEndElement()
+        writer.Close()
+    End Sub
+End Module
