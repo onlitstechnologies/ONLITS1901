@@ -22,6 +22,7 @@ Partial Class FrmMyNotepad
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMyNotepad))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,6 +42,10 @@ Partial Class FrmMyNotepad
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TxtEditingArea = New System.Windows.Forms.TextBox()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -169,6 +174,23 @@ Partial Class FrmMyNotepad
         Me.TxtEditingArea.TabIndex = 1
         Me.TxtEditingArea.WordWrap = False
         '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
+        'PrintDocument1
+        '
+        '
         'FrmMyNotepad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -205,4 +227,8 @@ Partial Class FrmMyNotepad
     Friend WithEvents TxtEditingArea As TextBox
     Friend WithEvents WordWrapToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PageSetupDialog1 As PageSetupDialog
 End Class

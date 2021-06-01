@@ -89,7 +89,21 @@ Public Class FrmMyNotepad
     End Sub
 
     Private Sub TxtEditingArea_TextChanged(sender As Object, e As EventArgs) Handles TxtEditingArea.TextChanged
-        Me.Text = "*" & Me.text
+        'Me.Text = "*" & Me.text
     End Sub
 
+    Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        e.Graphics.DrawString(TxtEditingArea.Text, TxtEditingArea.Font, Brushes.Black, New Point(10, 10))
+    End Sub
+
+    Private Sub PageSetupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PageSetupToolStripMenuItem.Click
+        PageSetupDialog1.Document = PrintDocument1
+        'PageSetupDialog1.PrinterSettings = PrintDocument1.PrinterSettings
+        PageSetupDialog1.ShowDialog()
+    End Sub
 End Class
