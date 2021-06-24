@@ -31,7 +31,7 @@ int main()
 
 
 
-void display(int n[], int s)
+void display(int n[], int s)		//O(n)
 {
 	int k;
 	printf("%-10s%-10s\n","Year","Sales");

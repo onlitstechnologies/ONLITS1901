@@ -11,9 +11,9 @@ public class BubbleSort {
     }
 
     void swap(int x, int y) {
-        x = x + y;
-        y = x - y;
-        x = x - y;
+        int t = arr[x];
+        arr[x] = arr[y];
+        arr[y] = t;
     }
 
     void sort() {
@@ -22,7 +22,7 @@ public class BubbleSort {
             {
                 if(arr[j]>arr[j+1])
                 {
-                    swap(arr[j], arr[j+1]);
+                    swap(j, j+1);
                 }
             }
         }
