@@ -10,7 +10,7 @@ public class BubbleSort {
 
     }
 
-    void swap(int x, int y) {
+    void swap(int x, int y) {       //here x and y are array index
         int t = arr[x];
         arr[x] = arr[y];
         arr[y] = t;
@@ -32,4 +32,4 @@ public class BubbleSort {
         for(int i=0; i<n; i++)
             System.out.println(arr[i]);
     }
-}
+} 
