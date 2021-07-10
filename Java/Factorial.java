@@ -16,6 +16,7 @@ public class Factorial {
 
 		System.out.println("The factorial of " + n + " is " + f + ".");
 
+		sc.close();
 	}
 
 	static int factorial(int n) {

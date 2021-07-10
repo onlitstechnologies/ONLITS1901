@@ -12,5 +12,6 @@ class DifferentInputHE {
 		
 		float salary = scan.nextFloat();
 		System.out.println(salary);
+		scan.close();
 	}
 }
