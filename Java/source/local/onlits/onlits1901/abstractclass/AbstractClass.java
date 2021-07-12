@@ -1,15 +1,16 @@
+package local.onlits.onlits1901.abstractclass;
 import java.util.Scanner;
 
-interface Shape {
-    float PI = 3.14F;
+abstract class Shape {
+    public final float PI = 3.14F;
 
-    void input();
-    float area();
+    public abstract void input();
+    public abstract float area();
 }
 
-class Circle implements Shape {
+class Circle extends Shape {
     private float rad;
-    public float test = 32.0F;
+
     public void input() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter radius: ");
@@ -30,7 +31,7 @@ class Triangle {
 
 }
 
-class InterfaceDemo {
+class AbstractClass {
     public static void main(String[] args) {
         Shape s = new Circle();
         s.input();
