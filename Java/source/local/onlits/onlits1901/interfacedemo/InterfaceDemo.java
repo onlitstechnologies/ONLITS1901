@@ -4,13 +4,16 @@ import java.util.Scanner;
 
 interface Shape {
     float PI = 3.14F;
-
     void input();
 
     float area();
 }
 
-class Circle implements Shape {
+interface Shape2 {
+
+}
+
+class Circle implements Shape, Shape2 {     //Multiple Inheritance in Java
     private float rad;
     public float test = 32.0F;
 
@@ -41,7 +44,6 @@ class Triangle implements Shape {
         b = sc.nextFloat();
         System.out.print("Enter the value of c: ");
         c = sc.nextFloat();
-        //sc.close();
     }
 
     public float area() {
@@ -53,11 +55,11 @@ class Triangle implements Shape {
 class InterfaceDemo {
     public static void main(String[] args) {
         Shape s = new Circle();
-        s.input();
-        System.out.println("The area of circle is " + s.area());
+        s.input();      //Runtime Polymorphism
+        System.out.println("The area of circle is " + s.area());    //Runtime Polymorphism
 
         s = new Triangle();
-        s.input();
-        System.out.printf("The area of triangle is %f ", s.area());
+        s.input();          //Runtime Polymorphism
+        System.out.printf("The area of triangle is %f ", s.area());     //Runtime Polymorphism
     }
 }

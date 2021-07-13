@@ -67,14 +67,14 @@ public:
 int main()
 {
     shape *s = new circle();
-    s->input();
-    cout<<"The are of circle is "<<s->area()<<endl;
+    s->input();     //Runtime Polymorphism
+    cout<<"The are of circle is "<<s->area()<<endl;     //Runtime Polymorphism
 
     s = new rectangle();
-    s->input();
-    cout<<"The area of rectangle is "<<s->area()<<endl;
+    s->input();     //Runtime Polymorphism
+    cout<<"The area of rectangle is "<<s->area()<<endl; //Runtime Polymorphism
 
     s = new triangle();
-    s->input();
-    cout<<"The area of triange is "<<s->area()<<endl;
+    s->input();         //Runtime Polymorphism
+    cout<<"The area of triange is "<<s->area()<<endl;    //Runtime Polymorphism
 }
