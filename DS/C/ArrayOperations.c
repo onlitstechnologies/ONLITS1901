@@ -32,7 +32,7 @@ int main()
 
 void menu(int *arr, int *size)
 {
-    int in;
+    int in, no;
     int ch; //O(1)
     do
     {
@@ -40,7 +40,9 @@ void menu(int *arr, int *size)
         printf("1. Display (Traverse)\n");
         printf("2. Insert (at the end)\n");
         printf("3. Insert (at a specified index)\n");
+        printf("6. Search (Linear)\n");
         printf("13. Delete (from the end)\n");
+        printf("14. Delete (from a specified index)\n");
         printf("Enter your choice (0 to exit): ");
         scanf("%d", &ch);
         switch (ch)
@@ -59,8 +61,18 @@ void menu(int *arr, int *size)
             scanf("%d", &in);
             insert_index(arr, size, in);
             break;
+        case 6:
+            printf("Enter number to search: ");
+            scanf("%d", &no);
+            search_linear(arr, size, no);
+            break;
         case 13:
             delete_end(arr, size);
+            break;
+        case 14:
+            printf("Enter index: ");
+            scanf("%d", &in);
+            delete_index(arr, size, in);
             break;
         default:
             printf("\nInvalid option!\n\n");
@@ -128,6 +140,18 @@ void insert_index(int *arr, int *size, const int in)
     }
 }
 
+void search_linear(int *arr, int *size, const int val)
+{
+    for (int i = 0; i < *size; i++)
+    {
+        if(arr[i] == val)
+        {
+            printf("\n%d found at index %d.\n\n", val, i);
+            break;
+        }
+    }
+}
+
 void delete_end(int *arr, int *size) //O(1)
 {
     if (*size == 0) //O(1)
@@ -138,5 +162,26 @@ void delete_end(int *arr, int *size) //O(1)
     {
         (*size)--;                                        //O(1)
         printf("\nItem at index %d deleted.\n\n", *size); //O(1)
+    }
+}
+
+void delete_index(int *arr, int *size, const int in)
+{
+    if (*size == 0)
+    {
+        printf("\nThe array is empty. There is nothing to delete!\n\n"); //O(1)
+    }
+    else if (in >= *size)
+    {
+        printf("\nIndex is out of range. Valid range is 0 to %d.\n\n", *size - 1);
+    }
+    else
+    {
+        for (int i = in; i < *size; i++)
+        {
+            arr[i] = arr[i + 1];
+        }
+        (*size)--;
+        printf("\nItem at index %d deleted.\n\n", in); //O(1)
     }
 }
